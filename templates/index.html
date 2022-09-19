@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+  <head>
+  <script type="text/javascript">
+    async function update_title() {
+      const metadata = await fetch('/metadata')
+      const data = await metadata.json()
+
+      let t = data[1]
+      let c = data[0]
+      document.title = t+' | '+c;
+    } 
+    window.onload = setInterval(update_title, 1000); 
+  </script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Quicksand">
+  <link rel="stylesheet" href="/static/main.css">
+  <link rel="icon" type="image/ico" href="/static/favicon.ico">
+  {% if request.cookies.get("theme") %}
+  <link rel="stylesheet" href="/static/{{ request.cookies.get("theme") }}.css">
+  {% else %}
+  <link rel="stylesheet" href="/static/light.css">
+  {% endif %}
+    
+  </head>
+  <body>
+    <div class="icon-color">
+      <a href="/settings">
+        <img alt="settings" src="http://www.citypng.com/public/uploads/small/11640258176xjibcplpdshoqjhxla4knho5tggbe18cmysagbxta7s2mwaoezjiqruk4cewbkhnkymyr4eoae1uzl0brwwicmmzsadt4ksayexo.png" width="25" height="25">
+      </a>
+    </div>
+    
+    <br/><br/><br/><br/><br/>
+    <div id="class" style="text-align:center"> {{ data[0] }} </div>
+    <div id="time" style="text-align:center"> {{ data[1] }}:{{ data[2] }}:{{ data[3] }} </div>
+    <div id="nextclass" style="text-align:center"> {{ data[4] }} </div>
+
+    <div class="icon">
+      <a href="https://github.com/wa1ker38552" target="_blank">
+        <img alt="github" src="https://cdn4.iconfinder.com/data/icons/iconsimple-logotypes/512/github-512.png" width="25" height="25">
+      </a>
+    </div>
+  
+  </body>
+  <script type="text/javascript">
+    var element_1 = document.getElementById("class");
+    var element_2 = document.getElementById("time");
+    var element_3 = document.getElementById("nextclass");
+
+    async function updater() {
+      // const time = await fetch('/time');
+      // const cls = await fetch('/class');
+      // const nextcls = await fetch('/nextclass');
+      const metadata = await fetch('/metadata')
+      const data = await metadata.json()
+
+      element_1.innerHTML = data[0]
+      element_2.innerHTML = data[1]
+      element_3.innerHTML = data[2]
+    }
+    
+    window.onload = setInterval(updater, 1000); 
+  </script>
+</html>
