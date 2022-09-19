@@ -1,0 +1,34 @@
+body {
+  background-color: #c2d9ff;
+  color: #7d9aca;
+}
+
+#class, #nextclass, #time {
+  color: #7d9aca;
+}
+
+.login-placeholder {
+  background-color: #7d9aca;
+  color: #c2d9ff;
+}
+
+.login-placeholder {
+  border: #7d9aca;
+  outline: #7d9aca;
+}
+
+input[type=submit] {
+  background-color: #7d9aca;
+  color: #c2d9ff;
+  border: #7d9aca;
+  outline: #7d9aca;
+}
+
+#theme {
+  background: #7d9aca;
+  color: #c2d9ff;
+}
+
+.icon, .icon-color {
+  filter: invert(100%) sepia(100%) saturate(7463%) hue-rotate(180deg) brightness(200%) contrast(115%);
+}
