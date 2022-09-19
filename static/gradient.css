@@ -1,0 +1,31 @@
+body {
+  background-color: #FFFFFF;
+}
+
+#class, #nextclass, #time, h1, h3 {
+  background: -webkit-linear-gradient(right, #86c4fe, #fe7cf3);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.login-placeholder {
+  background-color: #c2c2c2;
+  color: #292929;
+}
+
+.login-placeholder {
+  border: #FFFFFF;
+  outline: #FFFFFF;
+}
+
+input[type=submit] {
+  background-color: #c2c2c2;
+  color: #292929;
+  border: #FFFFFF;
+  outline: #FFFFFF;
+}
+
+#theme {
+  background: #c2c2c2;
+  color: #292929;
+}
