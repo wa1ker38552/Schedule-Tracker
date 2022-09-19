@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+  <head>
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Quicksand">
+  <link rel="stylesheet" href="/static/main.css">
+  <link rel="icon" type="image/ico" href="/static/favicon.ico">
+  {% if request.cookies.get("theme") %}
+  <link rel="stylesheet" href="/static/{{ request.cookies.get("theme") }}.css">
+  {% else %}
+  <link rel="stylesheet" href="/static/light.css">
+  {% endif %}
+    
+  </head>
+  <body>
+    <div class="icon">
+      <a href="/">
+        <img alt="home" src="https://www.iconpacks.net/icons/2/free-home-icon-2502-thumb.png" width="25" height="25">
+      </a>
+    </div>
+    
+    <!-- Form for requesting tokens and saving them onto database -->
+    <center><form action = "/setcookie" method = "POST">
+      <p><h4>Enter Aeries Token</h4></p>
+      <p><input class="login-placeholder" type = 'text' name = 'token' placeholder = 'Token'/></p>
+      <p><input class="login-placeholder" type = 'text' name = 'id' placeholder = 'ID'/></p>
+      <p><input type = 'submit' value = 'Save'/></p>
+    </form></center>
+
+    <form class = "theme" action = "/set_theme" method = "POST">
+      <select id = "theme" name = "theme">
+        <option value = "light" selected = "selected">Light</option>
+        <option value = "dark" selected = "selected">Dark</option>
+        <option value = "blue" selected = "selected">Blue</option>
+        <option value = "green" selected = "selected">Green</option>
+        <option value = "gradient" selected = "selected">gradient</option>
+      </select>
+      <input type="submit" value="Save">
+    </form>
+  
+  </body>
+</html>
