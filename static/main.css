@@ -1,0 +1,38 @@
+body {
+  font-family: "Quicksand", sans-serif;
+}
+
+#class, #nextclass {
+  font-size: 80px;
+}
+
+#time {
+  font-size: 130px;
+  font-weight: bold;
+}
+
+.icon {
+  position: absolute;
+  bottom: 8px;
+  right: 16px;
+}
+
+.top-icon {
+  position: absolute;
+  top: 8px;
+  right: 16px;
+}
+
+.theme {
+  position: absolute;
+  top: 8px;
+  right: 16px;
+}
+
+.login-placeholder::-webkit-input-placeholder { 
+  font-family: "Quicksand", sans-serif;
+}
+
+input[type=submit] {
+  font-family: "Quicksand", sans-serif;
+}
