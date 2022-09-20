@@ -3,11 +3,11 @@ body {
 }
 
 #class, #nextclass {
-  font-size: 80px;
+  font-size: 5.5vw;
 }
 
 #time {
-  font-size: 130px;
+  font-size: 5.5vw;
   font-weight: bold;
 }
 
