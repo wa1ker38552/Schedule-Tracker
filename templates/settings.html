@@ -1,10 +1,10 @@
 <!doctype html>
 <html>
   <head>
-
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Quicksand">
-  <link rel="stylesheet" href="/static/main.css">
+  <link rel="stylesheet" href="/static/style.css">
   <link rel="icon" type="image/ico" href="/static/favicon.ico">
+    
   {% if request.cookies.get("theme") %}
   <link rel="stylesheet" href="/static/{{ request.cookies.get("theme") }}.css">
   {% else %}
@@ -13,30 +13,41 @@
     
   </head>
   <body>
-    <div class="icon">
+    <div class="home-icon icon">
       <a href="/">
-        <img alt="home" src="https://www.iconpacks.net/icons/2/free-home-icon-2502-thumb.png" width="25" height="25">
+        <img alt="home" src="https://static.thenounproject.com/png/1047824-200.png" width="28" height="28">
       </a>
     </div>
-    
-    <!-- Form for requesting tokens and saving them onto database -->
-    <center><form action = "/setcookie" method = "POST">
-      <p><h4>Enter Aeries Token</h4></p>
-      <p><input class="login-placeholder" type = 'text' name = 'token' placeholder = 'Token'/></p>
-      <p><input class="login-placeholder" type = 'text' name = 'id' placeholder = 'ID'/></p>
-      <p><input type = 'submit' value = 'Save'/></p>
-    </form></center>
 
-    <form class = "theme" action = "/set_theme" method = "POST">
-      <select id = "theme" name = "theme">
-        <option value = "light" selected = "selected">Light</option>
-        <option value = "dark" selected = "selected">Dark</option>
-        <option value = "blue" selected = "selected">Blue</option>
-        <option value = "green" selected = "selected">Green</option>
-        <option value = "gradient" selected = "selected">gradient</option>
-      </select>
-      <input type="submit" value="Save">
-    </form>
+    <center>
+      <div class="panel-border">
+      <div class="settings-panel">
+        <form action="/setcookie" method="POST">
+          <div class="settings-header"> Settings </div>
+          <input class="form-input token" type="text" name="token" placeholder="Aeries token" autocomplete="off"/>
+          <input class="form-input id" type="text" name="id" placeholder="1000xxxxx" autocomplete="off"/>
+          <input class="button save-schedule" type="submit" value="Save"/>
+        </form>
+
+        <form class="set-theme" action="/set_theme" method="POST">
+          <select class="selection" name="theme">
+            <option class="option" value="light" selected="selected"> Light </option>
+            <option class="option" value="dark" selected="selected"> Dark </option>
+            <option class="option" value="blue" selected="selected"> Blue </option>
+            <option class="option" value="green" selected="selected"> Green </option>
+            <option class="option" value="gradient" selected="selected"> Gradient </option>
+          </select>
+        <input class="dropdown-save" type="submit" value="Save">
+      </form>
+      </div>
+      </div>
+    </center>
+
+    <div class="github-icon icon">
+      <a href="https://github.com/wa1ker38552/Schedule-Tracker" target="_blank">
+        <img alt="github" src="https://cdn-icons-png.flaticon.com/512/25/25231.png" width="23" height="23">
+      </a>
+    </div>
   
   </body>
 </html>
