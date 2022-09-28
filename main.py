@@ -1,13 +1,12 @@
+from assignments import get_assignments
 from flask import render_template
 from flask import make_response
 from schedule import schedule
 from flask import redirect
-from flask import url_for
 from flask import request
 from pytz import timezone
 from flask import Flask
 from replit import db
-import requests
 import datetime
 import pytz
 import json
@@ -117,33 +116,29 @@ def metadata():
   data.insert(1, time)
   return data
 
-@app.route('/setcookie', methods=['POST', 'GET'])
+@app.route('/setcookie', methods=['POST'])
 def setcookie():
   # creates a token cookie with your aeries_token
   # aeries tokens expie after 1 hour so any information saved is obsolete
   # values for database is your schedule
-  if request.method == 'POST':
-    aeries_token = request.form['token']
-    user_id = request.form['id']
+  aeries_token = request.form['token']
+  user_id = request.form['id']
 
-    try:
-      data = get_schedule(schedule(user_id, aeries_token))
-      
-      # save to database {'aeries token': [schedule]}
-      # needs to save aeries_token to database to ensure that website cookies match
-      db['tokens'][str(aeries_token)] = schedule(user_id, aeries_token)
-    except:
-      # invalid token passed, set to default
-      db['tokens'][str(aeries_token)] = default
+  try:
+    data = get_schedule(schedule(user_id, aeries_token))
+    
+    # save to database {'aeries token': [schedule]}
+    # needs to save aeries_token to database to ensure that website cookies match
+    db['tokens'][str(aeries_token)] = schedule(user_id, aeries_token)
+  except:
+    # invalid token passed, set to default
+    db['tokens'][str(aeries_token)] = default
 
-    # create cookies
-    response = make_response(redirect('/', code=302))
-    response.set_cookie('token', aeries_token)
+  # create cookies
+  response = make_response(redirect('/', code=302))
+  response.set_cookie('token', aeries_token)
 
-    return response
-  else:
-    # user tried to use a get request
-    return 'Method only accessible by POST'
+  return response
 
 @app.route('/getcookie', methods=['POST', 'GET'])
 def getcookie():
@@ -151,15 +146,12 @@ def getcookie():
     return list(db['tokens'][str(request.cookies.get('token'))])
   except KeyError: return 'Your cookie has not been saved to the database, login again to save it.'
 
-@app.route('/set_theme', methods=['POST', 'GET'])
+@app.route('/set_theme', methods=['POST'])
 def set_theme():
-  if request.method == 'POST':
-    response = make_response(redirect('/', code=302))
-    response.set_cookie("theme", request.form['theme'])
+  response = make_response(redirect('/', code=302))
+  response.set_cookie("theme", request.form['theme'])
 
-    return response
-  else:
-    return 'Method only accessible by POST'
+  return response
 
 @app.errorhandler(404)
 def page_not_found(e):
