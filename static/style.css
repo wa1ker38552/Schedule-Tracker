@@ -1,0 +1,167 @@
+body {
+  font-family: "Quicksand", sans-serif;
+}
+
+.title {
+  position: relative;
+  font-size: 5.5vw;
+}
+
+#class, #nextclass, #time {
+  top: 20vh;
+}
+
+#time {
+  font-weight: bold;
+}
+
+.settings-icon {
+  position: absolute;
+  bottom: 0.8vh;
+  right: 1vw;
+}
+
+.home-icon {
+  position: absolute;
+  bottom: 0.7vh;
+  right: 1vw;
+}
+
+.github-icon {
+  position: absolute;
+  bottom: 1vh;
+  right: 3.5vw;
+}
+
+.settings-panel {
+  /* position */
+  position: relative;
+  top: 20vh;
+
+  /* style */
+  border-style: solid;
+  border-radius: 1.5vw;
+  border: 2px;
+  width: 40vw;
+  height: 50vh;
+  box-shadow: 0 0 30px #525252;
+
+  /* color */
+  border-color: #000000;
+  background: #ffffff;
+}
+
+.form-input {
+  /* position */
+  position: absolute;
+  left: 2%;
+
+  /* style */
+  border: 2px;
+  border-style: solid;
+  border-radius: 1.5vw;
+  width: 50%;
+  height: 10%;
+  margin: 10px;
+  padding: 10px;
+  box-sizing: border-box;
+
+  /* color */
+  border-color: #e6e6e6;
+  background: #e6e6e6;
+  font-size: 1vw;
+  font-family: "Quicksand", sans-serif;
+}
+
+.button {
+  /* position */
+  position: absolute;
+  left: 2%;
+
+  /* style */
+  border: 2px;
+  border-style: solid;
+  border-radius: 1.5vw;
+  width: 15%;
+  height: 10%;
+  margin: 10px;
+  box-sizing: border-box;
+
+  /* color */
+  border-color: #bfbfbf;
+  background: #bfbfbf;
+  font-size: 1vw;
+  font-family: "Quicksand", sans-serif;
+}
+
+.set-theme {
+  /* position */
+  position: absolute;
+  left: 2%;
+  top: 54%;
+
+  /* style */
+  border: 2px;
+  border-style: solid;
+  border-radius: 1.5vw;
+  width: 30%;
+  height: 10%;
+  margin: 10px;
+  padding: 1px;
+  box-sizing: border-box;
+
+  /* color */
+  border-color: #e6e6e6;
+  background: #e6e6e6;
+  font-size: 1vw;
+  font-family: "Quicksand", sans-serif;
+}
+
+.dropdown-save {  
+  /* style */
+  border: 2px;
+  border-style: solid;
+  border-radius: 1.5vw;
+  width: 4vw;
+  height: 4vh;
+  padding: 3px;
+
+  /* color */
+  border-color: #ababab;
+  background: #ababab;
+  font-size: 1vw;
+  font-family: "Quicksand", sans-serif;
+}
+
+.token {
+  top: 15%;
+}
+
+.id {
+  top: 28%;
+}
+
+.save-schedule {
+  top: 41%;
+}
+
+.settings-header {
+  position: absolute;
+  top: 2%;
+  left: 5%;
+  
+  font-size: 5vh;
+}
+
+.selection {
+  /* color */
+  background: transparent;
+  border-color: transparent;
+
+  /* text style */
+  font-family: "Quicksand", sans-serif;
+}
+
+.selection .option:hover {
+  background-color: transparent;
+}
