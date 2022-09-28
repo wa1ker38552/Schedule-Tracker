@@ -1,34 +1,133 @@
 body {
-  background-color: #acfbbc;
-  color: #70d784;
+  font-family: "Quicksand", sans-serif;
+  background: #52ff7d;
+}
+
+.settings-header {
+  position: absolute;
+  top: 2%;
+  left: 5%;
+  
+  font-size: 5vh;
+  color: #FFFFFF
+}
+
+.title {
+  position: relative;
+  font-size: 5.5vw;
+  color: #ffffff;
 }
 
 #class, #nextclass, #time {
-  color: #70d784;
+  top: 20vh;
+  color: #ffffff;
 }
 
-.login-placeholder {
-  background-color: #70d784;
-  color: #acfbbc;
+.icon {
+  filter: invert(100%);
 }
 
-.login-placeholder {
-  border: #70d784;
-  outline: #70d784;
+.settings-panel {
+  /* position */
+  position: relative;
+  top: 20vh;
+
+  /* style */
+  border-style: solid;
+  border-radius: 1.5vw;
+  border: 2px;
+  width: 40vw;
+  height: 50vh;
+  box-shadow: 0 0 40px #95feb1;
+
+  /* color */
+  border-color: #95feb1;
+  background: #95feb1;
 }
 
-input[type=submit] {
-  background-color: #70d784;
-  color: #acfbbc;
-  border: #70d784;
-  outline: #70d784;
+.button {
+  /* position */
+  position: absolute;
+  left: 2%;
+
+  /* style */
+  border: 2px;
+  border-style: solid;
+  border-radius: 1.5vw;
+  width: 15%;
+  height: 10%;
+  margin: 10px;
+  box-sizing: border-box;
+
+  /* color */
+  border-color: #66ff8f;
+  background: #66ff8f;
+  font-size: 1vw;
+  font-family: "Quicksand", sans-serif;
 }
 
-#theme {
-  background: #70d784;
-  color: #acfbbc;
+.form-input {
+  /* position */
+  position: absolute;
+  left: 2%;
+
+  /* style */
+  border: 2px;
+  border-style: solid;
+  border-radius: 1.5vw;
+  width: 50%;
+  height: 10%;
+  margin: 10px;
+  padding: 10px;
+  box-sizing: border-box;
+
+  /* color */
+  border-color: #ccffda;
+  background: #ccffda;
+  font-size: 1vw;
+  font-family: "Quicksand", sans-serif;
 }
 
-.icon, .icon-color {
-  filter: invert(100%) sepia(100%) saturate(7463%) hue-rotate(250deg) brightness(200%) contrast(100%);
+.set-theme {
+  /* position */
+  position: absolute;
+  left: 2%;
+  top: 54%;
+
+  /* style */
+  border: 2px;
+  border-style: solid;
+  border-radius: 1.5vw;
+  width: 30%;
+  height: 10%;
+  margin: 10px;
+  padding: 1px;
+  box-sizing: border-box;
+
+  /* color */
+  border-color: #ccffda;
+  background: #ccffda;
+  font-size: 1vw;
+  font-family: "Quicksand", sans-serif;
+}
+
+.dropdown-save {  
+  /* style */
+  border: 2px;
+  border-style: solid;
+  border-radius: 1.5vw;
+  width: 4vw;
+  height: 4vh;
+  padding: 3px;
+
+  /* color */
+  border-color: #66ff8f;
+  background: #66ff8f;
+  font-size: 1vw;
+  font-family: "Quicksand", sans-serif;
+}
+
+
+.selection .option {
+  background-color: #52ff7d;
 }
