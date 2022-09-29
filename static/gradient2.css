@@ -1,0 +1,124 @@
+body {
+  font-family: "Quicksand", sans-serif;
+  background: #ffffff;
+  overflow: scroll;
+  overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+  width: 0; 
+  background: transparent;
+}
+
+.content {
+  width: 100vw;
+  height: 100vh;
+}
+
+.settings-header {
+  position: absolute;
+  top: 2%;
+  left: 5%;
+  
+  font-size: 5vh;
+  color: #000000;
+}
+
+.title {
+  position: relative;
+  font-size: 5.5vw;
+  background: -webkit-linear-gradient(right, #81bffe, #57ff73);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+#class, #nextclass, #time {
+  top: 20vh;
+  background: -webkit-linear-gradient(right, #81bffe, #57ff73);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.settings-panel {
+  /* position */
+  position: absolute;
+  top: 1vh;
+  left: 0.5vw;
+
+  /* style */
+  border-style: solid;
+  border-radius: 1vw;
+  border: 2px;
+  width: 40vw;
+  height: 50vh;
+  box-shadow: 0 0 40px #ffffff;
+
+  /* color */
+  border-color: #ffffff;
+  background: #ffffff;
+}
+
+.panel-border {
+  /* position */
+  position: absolute;
+  top: 20vh;
+  left: 30vw;
+
+  /* style */
+  border-style: solid;
+  border-radius: 1.5vw;
+  border: 10px;
+  width: 41vw;
+  height: 52vh;
+
+  /* color */
+  border-color: transparent;
+  background-image: linear-gradient(to right, #81bffe, #57ff73);
+}
+
+.button {
+  /* position */
+  position: absolute;
+  left: 2%;
+
+  /* style */
+  border: 2px;
+  border-style: solid;
+  border-radius: 1.5vw;
+  width: 15%;
+  height: 10%;
+  margin: 10px;
+  box-sizing: border-box;
+
+  /* color */
+  border-color: #d1d1d1;
+  background: #d1d1d1;
+  font-size: 1vw;
+  font-family: "Quicksand", sans-serif;
+}
+
+.form-input {
+  /* position */
+  position: absolute;
+  left: 2%;
+
+  /* style */
+  border: 2px;
+  border-style: solid;
+  border-radius: 1.5vw;
+  width: 50%;
+  height: 10%;
+  margin: 10px;
+  padding: 10px;
+  box-sizing: border-box;
+
+  /* color */
+  border-color: #e6e6e6;
+  background: #e6e6e6;
+  font-size: 1vw;
+  font-family: "Quicksand", sans-serif;
+}
+
+.selection .option {
+  background-color: #FFFFFF;
+}
