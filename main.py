@@ -98,6 +98,9 @@ def home():
     data = get_schedule(db['tokens'][str(request.cookies.get('token'))])
   except KeyError: 
     data = get_schedule(default)
+
+  if request.cookies.get('canvas') != None:
+    data.append(get_assignments(request.cookies.get('canvas'))[:8])
   return render_template('index.html', data=data)
 
 @app.route('/settings')
@@ -152,6 +155,20 @@ def set_theme():
   response.set_cookie("theme", request.form['theme'])
 
   return response
+
+@app.route('/setcanvascookie', methods=['POST'])
+def setcanvascookie():
+  response = make_response(redirect('/', code=302))
+  response.set_cookie('canvas', request.form['canvas'])
+
+  return response
+
+@app.route('/getassignments', methods=['GET'])
+def getassignments():
+  if request.cookies.get('canvas') != None:
+    return get_assignments(request.cookies.get('canvas'))
+  else:
+    return {'success': False}
 
 @app.errorhandler(404)
 def page_not_found(e):
