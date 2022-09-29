@@ -3,6 +3,10 @@ body {
   background: #4db2ff;
 }
 
+.assignment-title {
+  color: #FFFFFF;
+}
+
 .settings-header {
   position: absolute;
   top: 2%;
@@ -127,6 +131,24 @@ body {
   font-family: "Quicksand", sans-serif;
 }
 
+.assignment-container {
+  /* position */
+  position: relative;
+  
+  /* style */
+  border-style: solid;
+  border-radius: 2vh;
+  border: 2px;
+  width: 30vw;
+  height: 8vh;
+  margin: 1vh;
+  padding: 5px;
+  box-sizing: border-box;
+  
+  /* color */
+  border-color: #7cc5fe;
+  background: #7cc5fe;
+}
 
 .selection .option {
   background-color: #4db2ff;
