@@ -35,10 +35,16 @@
             <option class="option" value="dark" selected="selected"> Dark </option>
             <option class="option" value="blue" selected="selected"> Blue </option>
             <option class="option" value="green" selected="selected"> Green </option>
-            <option class="option" value="gradient" selected="selected"> Gradient </option>
+            <option class="option" value="gradient1" selected="selected"> Gradient (blue -> purple) </option>
+            <option class="option" value="gradient2" selected="selected"> Gradient (blue -> green) </option>
           </select>
-        <input class="dropdown-save" type="submit" value="Save">
-      </form>
+          <input class="dropdown-save" type="submit" value="Save">
+        </form>
+
+        <form action="/setcanvascookie" method="POST">
+          <input class="form-input canvas" type="text" name="canvas" placeholder="Canvas Token" autocomplete="off"/>
+          <input class="button save-token" type="submit" value="Save"/>
+        </form>
       </div>
       </div>
     </center>
