@@ -1,6 +1,13 @@
 body {
   font-family: "Quicksand", sans-serif;
   background: #52ff7d;
+  overflow: scroll;
+  overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+  width: 0; 
+  background: transparent;
 }
 
 .settings-header {
@@ -121,10 +128,29 @@ body {
   padding: 3px;
 
   /* color */
-  border-color: #66ff8f;
-  background: #66ff8f;
+  border-color: #ccffda;
+  background: #ccffda;
   font-size: 1vw;
   font-family: "Quicksand", sans-serif;
+}
+
+.assignment-container {
+  /* position */
+  position: relative;
+  
+  /* style */
+  border-style: solid;
+  border-radius: 2vh;
+  border: 2px;
+  width: 30vw;
+  height: 8vh;
+  margin: 1vh;
+  padding: 5px;
+  box-sizing: border-box;
+  
+  /* color */
+  border-color: #ccffda;
+  background: #ccffda;
 }
 
 
