@@ -13,22 +13,39 @@
     
   </head>
   <body>
-    <div class="settings-icon icon">
-      <a href="/settings">
-        <img alt="settings" src="http://www.citypng.com/public/uploads/small/11640258176xjibcplpdshoqjhxla4knho5tggbe18cmysagbxta7s2mwaoezjiqruk4cewbkhnkymyr4eoae1uzl0brwwicmmzsadt4ksayexo.png" width="25" height="25">
-      </a>
-    </div>
-    
-    <div id="class" class="title" style="text-align:center"> {{ data[0] }} </div>
-    <div id="time" class="title" style="text-align:center"> {{ data[1] }}:{{ data[2] }}:{{ data[3] }} </div>
-    <div id="nextclass" class="title" style="text-align:center"> {{ data[4] }} </div>
-
-    <div class="github-icon icon">
-      <a href="https://github.com/wa1ker38552/Schedule-Tracker" target="_blank">
-        <img alt="github" src="https://cdn-icons-png.flaticon.com/512/25/25231.png" width="23" height="23">
-      </a>
-    </div>
+    <div class="content">
+      <div class="settings-icon icon">
+        <a href="/settings">
+          <img alt="settings" src="http://www.citypng.com/public/uploads/small/11640258176xjibcplpdshoqjhxla4knho5tggbe18cmysagbxta7s2mwaoezjiqruk4cewbkhnkymyr4eoae1uzl0brwwicmmzsadt4ksayexo.png" width="25" height="25">
+        </a>
+      </div>
+      
+      <div id="class" class="title" style="text-align:center"> {{ data[0] }} </div>
+      <div id="time" class="title" style="text-align:center"> {{ data[1] }}:{{ data[2] }}:{{ data[3] }} </div>
+      <div id="nextclass" class="title" style="text-align:center"> {{ data[4] }} </div>
   
+      <div class="github-icon icon">
+        <a href="https://github.com/wa1ker38552/Schedule-Tracker" target="_blank">
+          <img alt="github" src="https://cdn-icons-png.flaticon.com/512/25/25231.png" width="23" height="23">
+        </a>
+      </div>
+    </div>
+    <div class="content">
+      <center>
+        <div class="title"> Upcoming Assignments </div>
+        {% if request.cookies.get('canvas') %}
+        <br><br>
+        {% for item in data[5] %}
+        <div class="assignment-container">
+          <div class="assignment-title"> {{ item['title'] }} </div>
+          <div class="assignment-title"> {{ item['due'] }} </div>
+        </div>
+        {% endfor %}
+        {% else %}
+        <h2> You don't have a cookie entered! </h2>
+        {% endif %}
+      </center>
+    </div>
   </body>
   <script type="text/javascript">
     var element_1 = document.getElementById("class");
