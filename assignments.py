@@ -10,8 +10,10 @@ def get_assignments(cookie):
 
   assignments = []
   for i, assignment in enumerate(request.json()):
+    print(assignment)
     assignments.append({
-      'title': assignment['plannable']['title']
+      'title': assignment['plannable']['title'],
+      'link': assignment['html_url']
     })
     try:
       assignments[i]['due'] = assignment['plannable']['due_at'].split('T')[0]
