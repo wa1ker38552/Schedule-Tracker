@@ -37,7 +37,7 @@
         <br><br>
         {% for item in data[5] %}
         <div class="assignment-container">
-          <div class="assignment-title"> {{ item['title'] }} </div>
+          <a class="assignment-title" href="https://mvla.instructure.com{{ item['link'] }}" target="_blank"> {{ item['title'] }} </a>
           <div class="assignment-title"> {{ item['due'] }} </div>
         </div>
         {% endfor %}
