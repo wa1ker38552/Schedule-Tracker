@@ -17,4 +17,4 @@ Current pages:
 - `/getcookie`
 - `/set_theme` POST
 
-To create a new theme, go to `templates/settings.html` and add new option using `<option value = "name" selected = "selected">name</option>`. Then go to `static/` and create a new `.css` file with the same name that you specified when creating the option. Copy over the code from `static/dark.css`. Now just edit the css file to include the colars that you want. 
+To create a new theme, go to `templates/settings.html` and add new option using `<option value = "name" selected = "selected">name</option>`. Then go to `static/` and create a new `.css` file with the same name that you specified when creating the option. Copy over the code from `static/dark.css`. Now just edit the css file to include the colors that you want. 
